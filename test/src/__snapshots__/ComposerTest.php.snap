@@ -1,0 +1,25 @@
+{
+    "testComposer-0": [
+        {
+            "insert": "In deze lede is ook wat "
+        },
+        {
+            "insert": "tekst",
+            "attributes": {
+                "bold": true
+            }
+        },
+        {
+            "insert": " ingetypt. Op die manier kan ik zien wat er gebeurt bij "
+        },
+        {
+            "insert": "veranderingen",
+            "attributes": {
+                "italic": true
+            }
+        },
+        {
+            "insert": ". Is hij niet mooi?"
+        }
+    ]
+}

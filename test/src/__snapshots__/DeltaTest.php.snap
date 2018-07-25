@@ -1,0 +1,12 @@
+{
+    "testHello-0": [
+        {
+            "insert": "hello world"
+        }
+    ],
+    "testCompose-0": [
+        {
+            "insert": "hello world"
+        }
+    ]
+}
