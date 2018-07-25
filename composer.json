@@ -2,10 +2,13 @@
     "name": "oberon/quill-delta",
     "description": "Compose the deltas of a quill editor history ops array. Port of npm library quill-delta",
     "type": "library",
+    "homepage": "https://github.com/jurriaanr/quill-delta",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jurriaan Ruitenberg",
-            "email": "jur@oberon.nl"
+            "email": "jur@oberon.nl",
+            "homepage": "https://www.oberon.nl",
         }
     ],
     "require": {
