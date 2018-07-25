@@ -2,6 +2,12 @@
 
 This is a PHP port of the npm library quill-delta. Right now it only ports the compose function to compose the full history including all the retains and deletes to a final version with only the necessary inserts.
 
+## installation
+
+Use composer
+
+    composer require oberon/quill-delta
+
 ## usage
     
     use Oberon\Quill\Delta\Composer;
@@ -51,3 +57,8 @@ or
     echo $output;
     
     // {"ops":[{"insert":"hello world"}]}
+    
+## notes
+
+    * only supports the delta compose method, diff and other utilities are not supported
+    
