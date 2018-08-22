@@ -8,5 +8,13 @@
         {
             "insert": "hello world"
         }
-    ]
+    ],
+    "testToArray-0": {
+        "ops": [
+            {
+                "insert": "hello world"
+            }
+        ]
+    },
+    "testToString-0": "{\"ops\":[{\"insert\":\"hello world\"}]}"
 }

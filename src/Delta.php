@@ -42,6 +42,26 @@ class Delta
         return $this->ops;
     }
 
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        return ["ops" => $this->ops];
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return json_encode($this->toArray(), JSON_OBJECT_AS_ARRAY);
+    }
+
+    /**
+     * @param array $newOp
+     * @return $this
+     */
     public function push(array $newOp)
     {
         $index = count($this->ops);
@@ -97,6 +117,10 @@ class Delta
         return $this;
     }
 
+    /**
+     * @param Delta $other
+     * @return Delta
+     */
     public function compose(Delta $other)
     {
         $thisIter = new OpsIterator($this->getOps());
@@ -140,6 +164,9 @@ class Delta
         return $delta->chop();
     }
 
+    /**
+     * @return $this
+     */
     public function chop()
     {
         $count = count($this->ops);
@@ -152,16 +179,16 @@ class Delta
         return $this;
     }
 
+    /**
+     * @param $array1
+     * @param $array2
+     * @return bool
+     */
     protected function equals($array1, $array2)
     {
         array_multisort($array1);
         array_multisort($array2);
         return (serialize($array1) === serialize($array2));
-    }
-
-    public function __toString()
-    {
-        return json_encode(["ops" => $this->ops], JSON_OBJECT_AS_ARRAY);
     }
 
     /**

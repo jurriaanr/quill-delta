@@ -13,17 +13,17 @@ class DeltaTest extends PHPUnit_Framework_TestCase
 
     public function testCompose()
     {
-        $ops1 = ["ops" => [
-            ["insert" => "hello"]
-        ]];
-        $ops2 = ["ops" => [
-            ["retain" => 5],
-            ["insert" => " world"]
-        ]];
+        $this->assertEqualsSnapshot($this->getComposed()->getOps());
+    }
 
-        $composed = (new Delta($ops1))->compose(new Delta($ops2));
+    public function testToArray()
+    {
+        $this->assertEqualsSnapshot($this->getComposed()->toArray());
+    }
 
-        $this->assertEqualsSnapshot($composed->getOps());
+    public function testToString()
+    {
+        $this->assertEqualsSnapshot((string)$this->getComposed());
     }
 
     public function testIsRetain()
@@ -59,5 +59,21 @@ class DeltaTest extends PHPUnit_Framework_TestCase
         $this->assertEquals([], Delta::getAttributes(['insert' => '', 'attributes' => []]));
         $this->assertEquals(['bold' => true], Delta::getAttributes(['insert' => '', 'attributes' => ['bold' => true]]));
         $this->assertEquals([], Delta::getAttributes(['insert' => '']));
+    }
+
+    /**
+     * @return Delta
+     */
+    private function getComposed()
+    {
+        $ops1 = ["ops" => [
+            ["insert" => "hello"]
+        ]];
+        $ops2 = ["ops" => [
+            ["retain" => 5],
+            ["insert" => " world"]
+        ]];
+
+        return (new Delta($ops1))->compose(new Delta($ops2));
     }
 }
