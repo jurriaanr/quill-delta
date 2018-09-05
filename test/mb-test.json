@@ -1,0 +1,46 @@
+[
+  {
+    "ops" : [
+      {
+        "insert" : "Critics have blamed Portman's performance on Lucas' direction and script. Roger Ebert, for example, charged that in "
+      },
+      {
+        "attributes" : {
+          "italic" : true
+        },
+        "insert" : "Attack of the Clones"
+      },
+      {
+        "insert" : " \"too much of ... the film is given over to a romance between Padmé and Anakin in which they're incapable of uttering anything other than the most basic and weary romantic clichés, while regarding each other as if love was something to be endured rather than cherished.\"[22]He offered a similar critique for "
+      },
+      {
+        "attributes" : {
+          "italic" : true
+        },
+        "insert" : "Revenge of the Sith"
+      },
+      {
+        "insert" : ": \"To say that George Lucas cannot write a love scene is an understatement; greeting cards have expressed more passion.\"[23] Todd McCarthy of "
+      },
+      {
+        "attributes" : {
+          "italic" : true
+        },
+        "insert" : "Variety"
+      },
+      {
+        "insert" : "likewise lamented that \"Lucas's shortcomings as a writer and director of intimate, one-on-one scenes\" hampered Portman's performance.[24]"
+      }
+    ]
+  },
+  {
+    "ops" : [
+      {
+        "retain" : 749
+      },
+      {
+        "insert" : "\n"
+      }
+    ]
+  }
+]

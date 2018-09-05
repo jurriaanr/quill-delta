@@ -47,7 +47,7 @@ class Delta
      */
     public function toArray()
     {
-        return ["ops" => $this->ops];
+        return ['ops' => $this->ops];
     }
 
     /**

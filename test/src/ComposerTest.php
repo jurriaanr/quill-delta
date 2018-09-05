@@ -19,4 +19,14 @@ class ComposerTest extends PHPUnit_Framework_TestCase
         $this->assertEqualsSnapshot($composed->getOps());
     }
 
+    public function testComposerMb()
+    {
+        $ops = json_decode(file_get_contents('test/mb-test.json'), JSON_OBJECT_AS_ARRAY);
+
+        $composer = new \Oberon\Quill\Delta\Composer();
+        $composed = $composer->compose($ops);
+
+        $this->assertEqualsSnapshot($composed->getOps());
+    }
+
 }

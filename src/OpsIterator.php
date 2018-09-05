@@ -119,6 +119,6 @@ class OpsIterator
             return $op[Delta::TYPE_RETAIN];
         }
 
-        return isset($op[Delta::TYPE_INSERT]) && is_string($op[Delta::TYPE_INSERT]) ? mb_strlen($op[Delta::TYPE_INSERT]) : 1;
+        return isset($op[Delta::TYPE_INSERT]) && is_string($op[Delta::TYPE_INSERT]) ? mb_strlen($op[Delta::TYPE_INSERT],'UTF-8') : 1;
     }
 }
