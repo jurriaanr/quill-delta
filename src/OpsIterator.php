@@ -61,7 +61,7 @@ class OpsIterator
                 if (Delta::isRetain($nextOp)) {
                     $retOp[Delta::TYPE_RETAIN] = $length;
                 } elseif (Delta::isInsert($nextOp)) {
-                    $retOp[Delta::TYPE_INSERT] = substr($nextOp[Delta::TYPE_INSERT], $offset, $length);
+                    $retOp[Delta::TYPE_INSERT] = mb_substr($nextOp[Delta::TYPE_INSERT], $offset, $length, 'UTF-8');
                 } else {
                     // offset should === 0, length should === 1
                     $retOp[Delta::TYPE_INSERT] = $nextOp[Delta::TYPE_INSERT];
