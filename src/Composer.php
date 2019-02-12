@@ -7,17 +7,16 @@
 
 namespace Oberon\Quill\Delta;
 
-class Composer
-{
-    /**
-     * @param $fullChanges
-     * @return Delta
-     */
-    public function compose($fullChanges)
-    {
-        return array_reduce($fullChanges, function(Delta $delta, $ops){
-            $comp = $delta->compose(new Delta($ops));
-            return $comp;
-        }, new Delta());
-    }
+class Composer {
+	/**
+	 * @param $fullChanges
+	 * @return Delta
+	 */
+	public function compose($fullChanges) {
+		return array_reduce($fullChanges, function (Delta $delta, $ops) {
+			$comp = $delta->compose(new Delta($ops));
+			
+			return $comp;
+		}, new Delta());
+	}
 }
